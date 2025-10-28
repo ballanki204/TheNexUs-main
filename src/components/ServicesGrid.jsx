@@ -1,70 +1,97 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Code2, TrendingUp, Leaf, Shield } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Card, CardContent } from "./ui/card";
+import { Button } from "./ui/button";
+import { Code2, TrendingUp, Leaf, Shield, ArrowRight } from "lucide-react";
 
 class ServicesGrid extends React.Component {
   render() {
     const services = [
       {
         icon: Code2,
-        title: 'Software Development',
-        description: 'Custom enterprise solutions for healthcare, real estate, trading, and more',
-        link: '/software'
+        title: "Software Development",
+        description:
+          "Custom enterprise solutions for healthcare, real estate, trading",
+        link: "/software",
+        gradient: "from-cyan-500 to-blue-500",
       },
       {
         icon: TrendingUp,
-        title: 'Digital Marketing',
-        description: 'Data-driven strategies to grow your online presence and reach',
-        link: '/digital-marketing'
+        title: "Digital Marketing",
+        description:
+          "Data-driven strategies to grow your online presence and reach",
+        link: "/digital-marketing",
+        gradient: "from-orange-500 to-yellow-500",
       },
       {
         icon: Leaf,
-        title: 'Plant Marketplace',
-        description: 'Revolutionary platform for buying and selling plants and greenery',
-        link: '/plant-marketplace'
+        title: "Plant Marketplace",
+        description:
+          "Revolutionary platform for buying and selling plants and greenery",
+        link: "/plant-marketplace",
+        gradient: "from-green-600 to-lime-500",
       },
       {
         icon: Shield,
-        title: 'Safety & HIRA App',
-        description: 'AI-powered hazard recognition and workplace safety solutions',
-        link: '/safety-app'
-      }
+        title: "Safety & HIRA App",
+        description:
+          "AI-powered hazard recognition and workplace safety solutions",
+        link: "/safety-app",
+        gradient: "from-red-600 to-orange-500",
+      },
     ];
 
     return (
-      <section className="py-20 bg-muted/50">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white border animate-fade-in">
         <div className="container">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-4">
+          <div className="text-center mb-16 animate-slide-up">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
               Our Services
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Comprehensive solutions tailored to your business needs
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => {
-              const Icon = service.icon;
+              const IconComponent = service.icon;
               return (
                 <Card
-                  key={service.title}
-                  className="group hover:shadow-lg transition-all animate-fade-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  key={index}
+                  className={`group relative overflow-hidden hover:shadow-2xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm animate-hover-lift animate-stagger-${
+                    index + 1
+                  }`}
                 >
-                  <CardHeader>
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                      <Icon className="h-6 w-6 text-primary" />
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                  ></div>
+                  <CardContent className="p-8 text-center relative">
+                    <div
+                      className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} text-white mb-6 group-hover:scale-110 transition-transform duration-300 animate-scale-in`}
+                    >
+                      <IconComponent className="w-8 h-8 animate-icon-rotate" />
                     </div>
-                    <CardTitle>{service.title}</CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Link to={service.link}>
-                      <Button variant="outline" className="w-full">
+
+                    <h3 className="text-xl font-bold mb-3 text-gray-900">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+
+                    <Link
+                      to={service.link}
+                      onClick={() =>
+                        window.scrollTo({ top: 0, behavior: "smooth" })
+                      }
+                    >
+                      <Button
+                        className={`w-full bg-gradient-to-r ${service.gradient} hover:opacity-90 text-white border-0 group/btn animate-button-hover`}
+                        size="lg"
+                      >
                         Learn More
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                       </Button>
                     </Link>
                   </CardContent>

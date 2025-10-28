@@ -43,20 +43,26 @@ const Chatbot = () => {
   return (
     <>
       {/* Floating Chat Icon */}
-      <Button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 md:bottom-10 left-4 md:left-10 z-50 rounded-full w-12 h-12 p-0 bg-blue-500 hover:bg-blue-600"
-      >
-        {isOpen ? (
-          <X className="w-6 h-6" />
-        ) : (
-          <MessageCircle className="w-6 h-6" />
+      <div className="fixed bottom-20 md:bottom-20 right-10 md:right-10 z-50">
+        {/* Notification Indicator */}
+        {!isOpen && (
+          <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-white animate-pulse"></div>
         )}
-      </Button>
+        <Button
+          onClick={() => setIsOpen(!isOpen)}
+          className="rounded-full w-12 h-12 p-0 bg-blue-500 hover:bg-blue-600"
+        >
+          {isOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <MessageCircle className="w-6 h-6" />
+          )}
+        </Button>
+      </div>
 
       {/* Chat Window */}
       {isOpen && (
-        <Card className="fixed bottom-10 md:bottom-20 left-10 md:left-20 w-80 h-96 z-40 flex flex-col shadow-lg">
+        <Card className="fixed bottom-20 md:bottom-25 right-10 md:right-20 w-60 md:w-80 h-80 md:h-96 z-40 flex flex-col shadow-lg">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg">Chatbot</CardTitle>
           </CardHeader>

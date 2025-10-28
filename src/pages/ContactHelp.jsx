@@ -141,7 +141,7 @@ class ContactHelp extends React.Component {
                   </div>
                   <div className="flex items-center gap-2">
                     <MessageCircle className="w-5 h-5" />
-                    <span>@TheNexUsCareers on social media</span>
+                    <span>@TheNexUSCareers on social media</span>
                   </div>
                 </CardContent>
               </Card>

@@ -19,9 +19,7 @@ const EducationElearning = () => {
 
   return (
     <div className="min-h-screen">
-      <Breadcrumb />
-      <div className="container py-4">
-      </div>
+      <div className="container py-4"></div>
       <main className="py-20">
         <div className="container">
           <div className="mb-12 text-center">

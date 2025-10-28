@@ -8,7 +8,7 @@ class Testimonials extends React.Component {
         name: "Alice Johnson",
         role: "Software Engineer",
         quote:
-          "Working at TheNexUs has been an incredible journey. The team is supportive and the projects are challenging.",
+          "Working at TheNexUS has been an incredible journey. The team is supportive and the projects are challenging.",
         image: "/placeholder-avatar.jpg",
       },
       {
@@ -31,7 +31,7 @@ class Testimonials extends React.Component {
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">
           <h1 className="text-3xl font-bold text-center mb-8">
-            Life at TheNexUs
+            Life at TheNexUS
           </h1>
 
           <section className="mb-12">

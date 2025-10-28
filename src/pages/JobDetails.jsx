@@ -49,7 +49,7 @@ const JobDetails = () => {
     if (navigator.share) {
       navigator.share({
         title: job.title,
-        text: `Check out this ${job.title} position at TheNexUs`,
+        text: `Check out this ${job.title} position at TheNexUS`,
         url: window.location.href,
       });
     } else {

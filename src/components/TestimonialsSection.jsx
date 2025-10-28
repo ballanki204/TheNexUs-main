@@ -6,7 +6,7 @@ class TestimonialsSection extends React.Component {
     const testimonials = [
       {
         quote:
-          "TheNexUs is more than a workplace—it's a community where innovation thrives.",
+          "TheNexUS is more than a workplace—it's a community where innovation thrives.",
         author: "Sarah Chen",
         role: "Senior Developer",
       },

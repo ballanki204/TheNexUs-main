@@ -1,106 +1,138 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import LoginPopup from "./LoginPopup";
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isMenuOpen: false,
-    };
-  }
+function Header() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  toggleMenu = () => {
-    this.setState((prevState) => ({ isMenuOpen: !prevState.isMenuOpen }));
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  closeMenu = () => {
-    this.setState({ isMenuOpen: false });
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
-  handleBookConsultancy = () => {
-    window.dispatchEvent(new CustomEvent("openConsultancy"));
-    this.closeMenu();
+  const handleBookConsultancy = () => {
+    navigate("/book");
+    closeMenu();
   };
 
-  render() {
-    const { isMenuOpen } = this.state;
-    const navItems = [
-      { name: "Home", path: "/" },
-      { name: "About", path: "/about" },
-      { name: "Software", path: "/software" },
-      { name: "Digital Marketing", path: "/digital-marketing" },
-      { name: "Plant Marketplace", path: "/plant-marketplace" },
-      { name: "Safety App", path: "/safety-app" },
-      { name: "Careers", path: "/careers" },
-    ];
+  // Define theme colors for each page
+  const themeColors = {
+    "/": { hover: "hover:text-primary", active: "text-primary" },
+    "/about": { hover: "hover:text-primary", active: "text-primary" },
+    "/software": { hover: "hover:text-primary", active: "text-primary" },
+    "/digital-marketing": {
+      hover: "hover:text-orange-600",
+      active: "text-orange-600",
+    },
+    "/plant-marketplace": {
+      hover: "hover:text-green-600",
+      active: "text-green-600",
+    },
+    "/safety-app": { hover: "hover:text-red-600", active: "text-red-600" },
+    "/careers": { hover: "hover:text-primary", active: "text-primary" },
+  };
 
+  const getCurrentTheme = () => {
     return (
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              TheNexUs
-            </span>
-          </Link>
+      themeColors[location.pathname] || {
+        hover: "hover:text-primary",
+        active: "text-primary",
+      }
+    );
+  };
 
-          <nav className="hidden md:flex md:items-center md:gap-6">
+  const currentTheme = getCurrentTheme();
+
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Software", path: "/software" },
+    { name: "Digital Marketing", path: "/digital-marketing" },
+    { name: "Plant Marketplace", path: "/plant-marketplace" },
+    { name: "Safety App", path: "/safety-app" },
+    { name: "Careers", path: "/careers" },
+  ];
+
+  return (
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center justify-between">
+        <Link to="/" className="flex items-center space-x-2">
+          <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            TheNexUS
+          </span>
+        </Link>
+
+        <nav className="hidden md:flex md:items-center md:gap-6">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              to={item.path}
+              className={`text-sm font-medium transition-colors ${
+                currentTheme.hover
+              } ${location.pathname === item.path ? currentTheme.active : ""}`}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              {item.name}
+            </Link>
+          ))}
+          <Link to={"/book"}>
+            {" "}
+            <Button>Book Consultancy</Button>
+          </Link>
+          <LoginPopup />
+        </nav>
+
+        <button
+          className="md:hidden"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
+        </button>
+      </div>
+
+      {isMenuOpen && (
+        <div className="md:hidden border-t bg-background">
+          <nav className="container flex flex-col gap-4 py-4">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-sm font-medium transition-colors hover:text-primary"
+                className={`text-sm font-medium transition-colors ${
+                  currentTheme.hover
+                } ${
+                  location.pathname === item.path ? currentTheme.active : ""
+                }`}
+                onClick={() => {
+                  closeMenu();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 {item.name}
               </Link>
             ))}
-            <Link to={"/book"}>
-              {" "}
-              <Button>Book Consultancy</Button>
-            </Link>
-            <LoginPopup />
+            <NavLink to={"/book"}>
+              <Button className="w-full">Book Consultancy</Button>
+            </NavLink>
+            <div className="pt-2">
+              <LoginPopup />
+            </div>
           </nav>
-
-          <button
-            className="md:hidden"
-            onClick={this.toggleMenu}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
         </div>
-
-        {isMenuOpen && (
-          <div className="md:hidden border-t bg-background">
-            <nav className="container flex flex-col gap-4 py-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className="text-sm font-medium transition-colors hover:text-primary"
-                  onClick={this.closeMenu}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <NavLink to={"/book"}>
-                <Button className="w-full">Book Consultancy</Button>
-              </NavLink>
-              <div className="pt-2">
-                <LoginPopup />
-              </div>
-            </nav>
-          </div>
-        )}
-      </header>
-    );
-  }
+      )}
+    </header>
+  );
 }
 
 export default Header;

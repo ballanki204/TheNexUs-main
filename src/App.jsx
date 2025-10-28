@@ -32,6 +32,8 @@ import Header from "./components/Header";
 import Chatbot from "./components/Chatbot";
 import Breadcrumb from "./components/Breadcrumb";
 
+import GoToTopButton from "./components/GoToTopButton";
+
 class App extends React.Component {
   render() {
     return (
@@ -79,6 +81,7 @@ class App extends React.Component {
         <Footer />
         <Toaster />
         <Chatbot />
+        <GoToTopButton />
       </BrowserRouter>
     );
   }

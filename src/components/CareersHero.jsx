@@ -5,7 +5,7 @@ import { ArrowRight, Users, Target, Heart } from "lucide-react";
 class CareersHero extends React.Component {
   render() {
     return (
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-orange-600 text-white overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div

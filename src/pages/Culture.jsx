@@ -35,7 +35,7 @@ class Culture extends React.Component {
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">Our Story</h2>
             <p className="text-gray-700">
-              TheNexUs was founded with a vision to connect technology with
+              TheNexUS was founded with a vision to connect technology with
               human needs. We believe in creating solutions that make a
               difference in people's lives.
             </p>

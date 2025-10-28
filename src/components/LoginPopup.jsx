@@ -96,7 +96,7 @@ const LoginPopup = () => {
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Welcome to TheNexUs</DialogTitle>
+          <DialogTitle>Welcome to TheNexUS</DialogTitle>
         </DialogHeader>
         <Tabs defaultValue="login" className="w-full">
           <TabsList className="grid w-full grid-cols-2">

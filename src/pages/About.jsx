@@ -1,6 +1,5 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 import {
   Card,
   CardDescription,
@@ -111,7 +110,7 @@ class About extends React.Component {
                   return (
                     <Card
                       key={value.title}
-                      className="text-center animate-fade-up"
+                      className="text-center animate-fade-up hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer"
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       <CardHeader>
@@ -138,7 +137,16 @@ class About extends React.Component {
                 </h2>
                 <div className="grid gap-8 md:grid-cols-2">
                   {platforms.map((platform) => (
-                    <Card key={platform.title}>
+                    <Card
+                      key={platform.title}
+                      className={
+                        platform.title === "Plant & Greenery Marketplace"
+                          ? "bg-green-50 border-green-200 hover:bg-green-100 hover:border-green-300 transition-colors"
+                          : platform.title === "Safety & HIRA Application"
+                          ? "bg-red-50 border-red-200 hover:bg-red-100 hover:border-red-300 transition-colors"
+                          : ""
+                      }
+                    >
                       <CardHeader>
                         <CardTitle>{platform.title}</CardTitle>
                         <CardDescription className="text-base">

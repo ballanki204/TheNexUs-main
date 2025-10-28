@@ -142,6 +142,10 @@ All colors MUST be HSL.
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Career Pages Animations */
 @layer components {
   /* Fade in animation */

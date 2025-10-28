@@ -53,11 +53,11 @@ class FeaturedJobs extends React.Component {
                   <p className="text-sm text-gray-600 mb-4 animate-fade-in animate-stagger-2">
                     {job.type}
                   </p>
-                  <Link to={`/careers/job/${job.id}`}>
-                    <Button className="w-full animate-button-hover">
-                      Apply Now
-                    </Button>
-                  </Link>
+                  {/* <Link to={`/careers/job/${job.id}`}> */}
+                  <Button className="w-full animate-button-hover">
+                    Comming Soon
+                  </Button>
+                  {/* </Link> */}
                 </CardContent>
               </Card>
             ))}

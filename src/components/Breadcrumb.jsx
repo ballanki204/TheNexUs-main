@@ -91,8 +91,8 @@ const Breadcrumb = () => {
     }
   });
 
-  // Don't show breadcrumbs on home page
-  if (location.pathname === "/") {
+  // Don't show breadcrumbs on home page or booking consultancy page
+  if (location.pathname === "/" || location.pathname === "/book") {
     return null;
   }
 

@@ -48,6 +48,9 @@ class Footer extends React.Component {
                     <Link
                       to={item.path}
                       className="text-sm text-muted-foreground hover:text-primary transition-colors "
+                      onClick={() =>
+                        window.scrollTo({ top: 0, behavior: "smooth" })
+                      }
                     >
                       {item.name}
                     </Link>
@@ -64,6 +67,9 @@ class Footer extends React.Component {
                     <Link
                       to={item.path}
                       className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      onClick={() =>
+                        window.scrollTo({ top: 0, behavior: "smooth" })
+                      }
                     >
                       {item.name}
                     </Link>

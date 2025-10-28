@@ -158,7 +158,7 @@ class ApplicationForm extends React.Component {
           />
         </div>
         <div>
-          <Label htmlFor="whyJoin">Why do you want to join TheNexUs?</Label>
+          <Label htmlFor="whyJoin">Why do you want to join TheNexUS?</Label>
           <Textarea
             id="whyJoin"
             name="whyJoin"

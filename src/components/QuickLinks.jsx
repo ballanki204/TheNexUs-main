@@ -21,7 +21,7 @@ class QuickLinks extends React.Component {
         icon: TrendingUp,
         count: 8,
         description: "Drive growth and brand awareness",
-        gradient: "from-purple-500 to-pink-500",
+        gradient: "from-orange-500 to-red-500",
       },
       {
         name: "Design",
@@ -29,7 +29,7 @@ class QuickLinks extends React.Component {
         icon: Palette,
         count: 6,
         description: "Create beautiful user experiences",
-        gradient: "from-orange-500 to-red-500",
+        gradient: "from-purple-500 to-pink-500",
       },
       {
         name: "Sales",
@@ -91,7 +91,12 @@ class QuickLinks extends React.Component {
                       </div>
                     </div>
 
-                    <Link to={category.path}>
+                    <Link
+                      to={category.path}
+                      onClick={() =>
+                        window.scrollTo({ top: 0, behavior: "smooth" })
+                      }
+                    >
                       <Button
                         className={`w-full bg-gradient-to-r ${category.gradient} hover:opacity-90 text-white border-0 group/btn animate-button-hover`}
                         size="lg"
@@ -111,7 +116,10 @@ class QuickLinks extends React.Component {
             <p className="text-gray-600 mb-6">
               Can't find what you're looking for?
             </p>
-            <Link to="/careers/jobs">
+            <Link
+              to="/careers/jobs"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
               <Button
                 variant="outline"
                 size="lg"

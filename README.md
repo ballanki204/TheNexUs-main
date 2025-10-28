@@ -4,8 +4,8 @@ A modern, responsive business website built with React and Vite, showcasing serv
 
 ## Features
 
-- **Homepage**: Hero section with key highlights and navigation.
-- **About Page**: Information about the company and its mission.
+- **Homepage**: Hero section with key highlights and navigation (Contact form removed).
+- **About Page**: Information about the company and its mission with themed platform cards (green for Plant Marketplace, red for Safety App) and interactive hover effects.
 - **Software Services**: Detailed pages for industry-specific software solutions including:
   - Healthcare
   - Real Estate
@@ -23,6 +23,8 @@ A modern, responsive business website built with React and Vite, showcasing serv
 - **Chatbot**: Integrated chatbot for user assistance.
 - **Responsive Design**: Optimized for desktop and mobile devices.
 - **Dark/Light Mode**: Theme switching capability.
+- **Breadcrumb Navigation**: Dynamic breadcrumbs on all pages except home and booking consultancy.
+- **Optimized Build**: Code-split chunks for better performance (vendor, UI, router, utils, icons).
 
 ## Tech Stack
 

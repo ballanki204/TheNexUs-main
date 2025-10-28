@@ -6,7 +6,6 @@ import {
   CardHeader,
   CardTitle,
 } from "../../components/ui/card";
-import Breadcrumb from "../../components/Breadcrumb";
 
 const Cybersecurity = () => {
   const applications = [
@@ -19,9 +18,7 @@ const Cybersecurity = () => {
 
   return (
     <div className="min-h-screen">
-      <Breadcrumb />
-      <div className="container py-4">
-      </div>
+      <div className="container py-4"></div>
       <main className="py-20">
         <div className="container">
           <div className="mb-12 text-center">
@@ -29,7 +26,8 @@ const Cybersecurity = () => {
               Cybersecurity Applications
             </h1>
             <p className="mx-auto max-w-2xl text-muted-foreground">
-              Comprehensive software solutions for cybersecurity and data protection
+              Comprehensive software solutions for cybersecurity and data
+              protection
             </p>
           </div>
 

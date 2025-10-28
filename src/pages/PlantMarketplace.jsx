@@ -86,14 +86,14 @@ class PlantMarketplace extends React.Component {
     return (
       <div className="min-h-screen">
         <main>
-          <section className="relative overflow-hidden bg-gradient-to-br from-secondary/10 via-background to-background py-20">
+          <section className="relative overflow-hidden bg-gradient-to-br from-green-100 via-lime-200 to-amber-200 py-20">
             <div className="container">
               <div className="grid items-center gap-12 md:grid-cols-2">
                 <div>
-                  <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-6xl">
+                  <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-6xl text-green-800">
                     Plant & Greenery Marketplace
                   </h1>
-                  <p className="mb-8 text-lg text-muted-foreground">
+                  <p className="mb-8 text-lg text-green-700">
                     Revolutionary platform empowering home-based entrepreneurs
                     to buy, sell, and grow their plant business legally and
                     sustainably
@@ -101,13 +101,14 @@ class PlantMarketplace extends React.Component {
                   <div className="flex flex-col gap-4 sm:flex-row">
                     <Button
                       size="lg"
-                      className="bg-secondary hover:bg-secondary/90"
+                      className="bg-green-600 text-white hover:bg-green-700"
                     >
                       Join as Seller
                     </Button>
                     <Button
                       size="lg"
                       variant="outline"
+                      className="border-green-600 text-green-600 hover:bg-green-50"
                       onClick={() => this.setConsultancyOpen(true)}
                     >
                       Learn More
@@ -142,12 +143,12 @@ class PlantMarketplace extends React.Component {
                   return (
                     <Card
                       key={feature.title}
-                      className="group transition-all hover:shadow-lg animate-fade-up"
+                      className="group transition-all hover:shadow-lg hover:scale-105 hover:border-green-300 animate-fade-up"
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       <CardHeader>
-                        <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-secondary/10">
-                          <Icon className="h-6 w-6 text-secondary" />
+                        <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-green-100 group-hover:bg-green-200 transition-colors">
+                          <Icon className="h-6 w-6 text-green-600 group-hover:text-green-700 transition-colors" />
                         </div>
                         <CardTitle className="text-xl">
                           {feature.title}
@@ -176,10 +177,12 @@ class PlantMarketplace extends React.Component {
                   {categories.map((category) => (
                     <Card
                       key={category}
-                      className="text-center transition-all hover:shadow-md"
+                      className="text-center transition-all hover:shadow-md hover:scale-105 hover:border-green-300 cursor-pointer"
                     >
                       <CardContent className="p-6">
-                        <p className="font-medium text-secondary">{category}</p>
+                        <p className="font-medium text-green-600 hover:text-green-700 transition-colors">
+                          {category}
+                        </p>
                       </CardContent>
                     </Card>
                   ))}
@@ -195,9 +198,9 @@ class PlantMarketplace extends React.Component {
                   Platform Roadmap
                 </h2>
                 <div className="grid gap-8 md:grid-cols-2">
-                  <Card className="border-2 border-secondary">
+                  <Card className="border-2 border-green-600">
                     <CardHeader>
-                      <CardTitle className="text-secondary">
+                      <CardTitle className="text-green-600">
                         Version 1 (Current)
                       </CardTitle>
                       <CardDescription>
@@ -217,7 +220,7 @@ class PlantMarketplace extends React.Component {
                             key={item}
                             className="flex items-start gap-2 text-sm"
                           >
-                            <div className="mt-1.5 h-1 w-1 rounded-full bg-secondary" />
+                            <div className="mt-1.5 h-1 w-1 rounded-full bg-green-600" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -245,7 +248,7 @@ class PlantMarketplace extends React.Component {
                             key={item}
                             className="flex items-start gap-2 text-sm text-muted-foreground"
                           >
-                            <div className="mt-1.5 h-1 w-1 rounded-full bg-primary" />
+                            <div className="mt-1.5 h-1 w-1 rounded-full bg-green-600" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -257,7 +260,7 @@ class PlantMarketplace extends React.Component {
             </div>
           </section>
 
-          <section className="bg-gradient-to-br from-secondary to-secondary/80 py-20 text-white">
+          <section className="bg-gradient-to-br from-green-600 via-lime-500 to-amber-700 py-20 text-white">
             <div className="container">
               <div className="mx-auto max-w-3xl text-center">
                 <h2 className="mb-6 text-4xl font-bold">
@@ -270,17 +273,16 @@ class PlantMarketplace extends React.Component {
                 <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
                   <Button
                     size="lg"
-                    className="bg-white text-secondary hover:bg-white/90"
+                    className="bg-white text-green-600 hover:bg-white/90"
                   >
                     Sign Up Free
                   </Button>
 
-                  <Link to={"/book"}>
-                    {" "}
+                  <Link to="/book">
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-white text-green-700 hover:bg-white/10"
+                      className="border-white text-green-600 hover:bg-white/10"
                     >
                       Book Consultancy
                     </Button>

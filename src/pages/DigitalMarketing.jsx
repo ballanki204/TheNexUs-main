@@ -17,7 +17,6 @@ import {
   Target,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import Breadcrumb from "../components/Breadcrumb";
 
 class DigitalMarketing extends React.Component {
   constructor(props) {
@@ -110,9 +109,8 @@ class DigitalMarketing extends React.Component {
 
     return (
       <div className="min-h-screen">
-        <Breadcrumb />
         <main>
-          <section className="bg-gradient-to-br from-primary/10 via-background to-background py-20">
+          <section className="bg-gradient-to-br from-orange-100 via-yellow-50 to-orange-50 py-20">
             <div className="container">
               <div className="mx-auto max-w-3xl text-center">
                 <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-6xl">
@@ -123,9 +121,13 @@ class DigitalMarketing extends React.Component {
                   presence, reach your target audience, and drive measurable
                   results
                 </p>
-                <Link to={"/book"}>
-                  {" "}
-                  <Button size="lg">Book Consultancy</Button>
+                <Link to="/book">
+                  <Button
+                    size="lg"
+                    className="bg-orange-600 hover:bg-orange-700 text-white"
+                  >
+                    Book Consultancy
+                  </Button>
                 </Link>
               </div>
             </div>
@@ -148,12 +150,12 @@ class DigitalMarketing extends React.Component {
                   return (
                     <Card
                       key={service.title}
-                      className="group transition-all hover:shadow-lg animate-fade-up"
+                      className="group transition-all hover:shadow-lg hover:scale-105 hover:border-orange-300 animate-fade-up"
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       <CardHeader>
-                        <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                          <Icon className="h-6 w-6 text-primary" />
+                        <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100 group-hover:bg-orange-200 transition-colors">
+                          <Icon className="h-6 w-6 text-orange-600 group-hover:text-orange-700 transition-colors" />
                         </div>
                         <CardTitle className="text-xl">
                           {service.title}
@@ -167,7 +169,7 @@ class DigitalMarketing extends React.Component {
                               key={feature}
                               className="flex items-start gap-2 text-sm text-muted-foreground"
                             >
-                              <div className="mt-1.5 h-1 w-1 rounded-full bg-primary" />
+                              <div className="mt-1.5 h-1 w-1 rounded-full bg-orange-600" />
                               <span>{feature}</span>
                             </li>
                           ))}
@@ -179,15 +181,19 @@ class DigitalMarketing extends React.Component {
               </div>
 
               <div className="mt-12 text-center">
-                <Link to={"/book"}>
-                  {" "}
-                  <Button size="lg">Book Consultancy</Button>
+                <Link to="/book">
+                  <Button
+                    size="lg"
+                    className="bg-orange-600 hover:bg-orange-700 text-white"
+                  >
+                    Book Consultancy
+                  </Button>
                 </Link>
               </div>
             </div>
           </section>
 
-          <section className="bg-muted/50 py-20">
+          <section className="bg-gradient-to-br from-orange-50 via-yellow-50 to-orange-50 py-20">
             <div className="container">
               <div className="mx-auto max-w-4xl">
                 <h2 className="mb-12 text-center text-3xl font-bold md:text-4xl">
@@ -212,12 +218,17 @@ class DigitalMarketing extends React.Component {
                       desc: "Experienced marketers dedicated to your success",
                     },
                   ].map((benefit) => (
-                    <Card key={benefit.title}>
+                    <Card
+                      key={benefit.title}
+                      className="group transition-all hover:shadow-lg hover:scale-105 hover:border-orange-300"
+                    >
                       <CardContent className="p-6">
-                        <h3 className="mb-2 text-lg font-semibold">
+                        <h3 className="mb-2 text-lg font-semibold group-hover:text-orange-700 transition-colors">
                           {benefit.title}
                         </h3>
-                        <p className="text-muted-foreground">{benefit.desc}</p>
+                        <p className="text-muted-foreground group-hover:text-orange-600 transition-colors">
+                          {benefit.desc}
+                        </p>
                       </CardContent>
                     </Card>
                   ))}

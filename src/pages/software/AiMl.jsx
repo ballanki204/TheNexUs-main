@@ -19,9 +19,7 @@ const AiMl = () => {
 
   return (
     <div className="min-h-screen">
-      <Breadcrumb />
-      <div className="container py-4">
-      </div>
+      <div className="container py-4"></div>
       <main className="py-20">
         <div className="container">
           <div className="mb-12 text-center">
@@ -29,7 +27,8 @@ const AiMl = () => {
               AI / ML Applications
             </h1>
             <p className="mx-auto max-w-2xl text-muted-foreground">
-              Comprehensive software solutions using artificial intelligence and machine learning
+              Comprehensive software solutions using artificial intelligence and
+              machine learning
             </p>
           </div>
 

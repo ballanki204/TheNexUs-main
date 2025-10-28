@@ -243,12 +243,18 @@ class JobCards extends React.Component {
                 ))}
               </div>
 
-              <Link to={`/careers/job/${job.id}`}>
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 group/btn animate-button-hover">
-                  Apply Now
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+              {job.type === "Full-time" ? (
+                <Button className="w-full bg-gradient-to-r from-gray-400 to-gray-500 text-white border-0 cursor-not-allowed opacity-60">
+                  Coming Soon
                 </Button>
-              </Link>
+              ) : (
+                <Link to={`/careers/job/${job.id}`}>
+                  <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 group/btn animate-button-hover">
+                    Apply Now
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+              )}
             </CardContent>
           </Card>
         ))}
