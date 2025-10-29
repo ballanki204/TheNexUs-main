@@ -2,26 +2,26 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
-import { Code2, TrendingUp, ArrowRight } from "lucide-react";
+import { Leaf, Shield, ArrowRight } from "lucide-react";
 
-class ServicesGrid extends React.Component {
+class ProductsGrid extends React.Component {
   render() {
-    const services = [
+    const products = [
       {
-        icon: Code2,
-        title: "Software Development",
+        icon: Leaf,
+        title: "Plant Marketplace",
         description:
-          "Custom enterprise solutions for healthcare, real estate, trading",
-        link: "/software",
-        gradient: "from-cyan-300 to-blue-400",
+          "Revolutionary platform for buying and selling plants and greenery",
+        link: "/plant-marketplace",
+        gradient: "from-green-200 to-amber-300",
       },
       {
-        icon: TrendingUp,
-        title: "Digital Marketing",
+        icon: Shield,
+        title: "Safety & HIRA App",
         description:
-          "Data-driven strategies to grow your online presence and reach",
-        link: "/digital-marketing",
-        gradient: "from-orange-300 to-yellow-400",
+          "AI-powered hazard recognition and workplace safety solutions",
+        link: "/safety-app",
+        gradient: "from-red-600 to-orange-500",
       },
     ];
 
@@ -30,16 +30,16 @@ class ServicesGrid extends React.Component {
         <div className="container">
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
-              Our Services
+              Our Products
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive solutions tailored to your business needs
+              Innovative solutions designed to enhance your business operations
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => {
-              const IconComponent = service.icon;
+            {products.map((product, index) => {
+              const IconComponent = product.icon;
               return (
                 <Card
                   key={index}
@@ -48,30 +48,30 @@ class ServicesGrid extends React.Component {
                   }`}
                 >
                   <div
-                    className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                    className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
                   ></div>
                   <CardContent className="p-8 text-center relative">
                     <div
-                      className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} text-white mb-6 group-hover:scale-110 transition-transform duration-300 animate-scale-in`}
+                      className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${product.gradient} text-white mb-6 group-hover:scale-110 transition-transform duration-300 animate-scale-in`}
                     >
                       <IconComponent className="w-8 h-8 animate-icon-rotate" />
                     </div>
 
                     <h3 className="text-xl font-bold mb-3 text-gray-900">
-                      {service.title}
+                      {product.title}
                     </h3>
                     <p className="text-gray-600 mb-6 text-sm leading-relaxed">
-                      {service.description}
+                      {product.description}
                     </p>
 
                     <Link
-                      to={service.link}
+                      to={product.link}
                       onClick={() =>
                         window.scrollTo({ top: 0, behavior: "smooth" })
                       }
                     >
                       <Button
-                        className={`w-full bg-gradient-to-r ${service.gradient} hover:opacity-90 text-white border-0 group/btn animate-button-hover`}
+                        className={`w-full bg-gradient-to-r ${product.gradient} hover:opacity-90 text-white border-0 group/btn animate-button-hover`}
                         size="lg"
                       >
                         Learn More
@@ -89,4 +89,4 @@ class ServicesGrid extends React.Component {
   }
 }
 
-export default ServicesGrid;
+export default ProductsGrid;

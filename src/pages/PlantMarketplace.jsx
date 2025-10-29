@@ -108,7 +108,7 @@ class PlantMarketplace extends React.Component {
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-green-600 text-green-600 hover:bg-green-50"
+                      className="border-green-500 text-green-500 hover:bg-green-500"
                       onClick={() => this.setConsultancyOpen(true)}
                     >
                       Learn More
@@ -260,20 +260,20 @@ class PlantMarketplace extends React.Component {
             </div>
           </section>
 
-          <section className="bg-gradient-to-br from-green-600 via-lime-500 to-amber-700 py-20 text-white">
+          <section className="bg-gradient-to-br from-green-400 via-yellow-400 to-blue-500 py-20 text-white animate-gradient-bg">
             <div className="container">
               <div className="mx-auto max-w-3xl text-center">
-                <h2 className="mb-6 text-4xl font-bold">
+                <h2 className="mb-6 text-4xl font-bold animate-fade-in">
                   Ready to Start Your Plant Business?
                 </h2>
-                <p className="mb-8 text-lg opacity-90">
+                <p className="mb-8 text-lg opacity-90 animate-slide-up">
                   Join our growing community of plant entrepreneurs and start
                   earning from home
                 </p>
-                <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+                <div className="flex flex-col gap-4 sm:flex-row sm:justify-center animate-scale-in">
                   <Button
                     size="lg"
-                    className="bg-white text-green-600 hover:bg-white/90"
+                    className="bg-white text-green-600 hover:bg-white/90 animate-button-hover"
                   >
                     Sign Up Free
                   </Button>
@@ -282,7 +282,7 @@ class PlantMarketplace extends React.Component {
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-white text-green-600 hover:bg-white/10"
+                      className="border-white text-green-600 hover:bg-white/10 animate-button-hover"
                     >
                       Book Consultancy
                     </Button>

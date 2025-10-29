@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import ServicesGrid from "../components/ServicesGrid";
+import ProductsGrid from "../components/ProductsGrid";
 import GreenInitiative from "../components/GreenInitiative";
 import Footer from "../components/Footer";
 import BookConsultancyModal from "../components/BookConsultancyModal";
@@ -36,6 +37,7 @@ class Index extends React.Component {
         <main>
           <Hero />
           <ServicesGrid />
+          <ProductsGrid />
           <GreenInitiative />
         </main>
       </div>

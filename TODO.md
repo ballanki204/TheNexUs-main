@@ -1,4 +1,3 @@
-- [x] Remove Active Users and Safety Reports Generated stats from SafetyApp How It Works section
-- [x] Apply animated number theme to Take Picture, AI Analysis, Get Solutions steps
-- [x] Add downloaded user section back to SafetyApp How It Works section
-- [x] Redesign BookConsultancyModal with new theme, banner on left, form on right, add Place field, improve styling
+# TODO: Update Plant Marketplace Color Theme in Home Page
+
+- [x] Change the gradient for Plant Marketplace service in ServicesGrid.jsx from "from-green-600 to-lime-500" to "from-green-200 to-amber-300" for a better view with light gradient that doesn't match the hero theme.

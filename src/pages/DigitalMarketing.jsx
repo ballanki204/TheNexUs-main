@@ -126,7 +126,7 @@ class DigitalMarketing extends React.Component {
                     size="lg"
                     className="bg-orange-600 hover:bg-orange-700 text-white"
                   >
-                    Book Consultancy
+                    Book a Session
                   </Button>
                 </Link>
               </div>

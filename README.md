@@ -5,6 +5,8 @@ A modern, responsive business website built with React and Vite, showcasing serv
 ## Features
 
 - **Homepage**: Hero section with key highlights and navigation (Contact form removed).
+  - **Our Services**: Software Development and Digital Marketing.
+  - **Our Products**: Plant Marketplace and Safety & HIRA App.
 - **About Page**: Information about the company and its mission with themed platform cards (green for Plant Marketplace, red for Safety App) and interactive hover effects.
 - **Software Services**: Detailed pages for industry-specific software solutions including:
   - Healthcare

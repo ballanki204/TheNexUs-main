@@ -8,6 +8,8 @@ class Footer extends React.Component {
       services: [
         { name: "Software Development", path: "/software" },
         { name: "Digital Marketing", path: "/digital-marketing" },
+      ],
+      products: [
         { name: "Plant Marketplace", path: "/plant-marketplace" },
         { name: "Safety App", path: "/safety-app" },
       ],
@@ -27,9 +29,9 @@ class Footer extends React.Component {
     return (
       <footer className="bg-muted/50 border-t">
         <div className="container py-12 md:py-16">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
             <div>
-              <h3 className="text-lg font-semibold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <h3 className="text-lg font-semibold mb-4 animate-gradient-text text-transparent">
                 TheNexUS
               </h3>
               <p className="text-sm text-muted-foreground text-left">
@@ -48,6 +50,25 @@ class Footer extends React.Component {
                     <Link
                       to={item.path}
                       className="text-sm text-muted-foreground hover:text-primary transition-colors "
+                      onClick={() =>
+                        window.scrollTo({ top: 0, behavior: "smooth" })
+                      }
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-sm font-semibold mb-4">Products</h4>
+              <ul className="space-y-2">
+                {navigation.products.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      to={item.path}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
                       onClick={() =>
                         window.scrollTo({ top: 0, behavior: "smooth" })
                       }

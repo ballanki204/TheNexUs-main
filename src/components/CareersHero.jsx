@@ -16,7 +16,7 @@ class CareersHero extends React.Component {
           ></div>
         </div>
 
-        <div className="relative container mx-auto px-10 py-5 lg:py-10">
+        <div className="relative container mx-auto px-4 py-5 lg:px-10 lg:py-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="text-center lg:text-left animate-fade-in">
@@ -40,7 +40,7 @@ class CareersHero extends React.Component {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in animate-stagger-2">
                 <Button
                   size="lg"
-                  className="bg-white text-slate-900 hover:bg-gray-100 font-semibold px-8 py-4 text-lg group animate-hover-lift"
+                  className="bg-white text-slate-900 hover:bg-gray-100 font-semibold px-6 md:px-8 py-4 text-lg group animate-hover-lift"
                 >
                   Explore Opportunities
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -84,9 +84,9 @@ class CareersHero extends React.Component {
           {/* Bottom CTA */}
           <div className="mt-16 text-center animate-fade-in animate-stagger-4">
             <p className="text-gray-400 mb-4">Trusted by industry leaders</p>
-            <div className="flex justify-center items-center gap-8 opacity-60">
+            <div className="flex justify-center items-center gap-3 md:gap-8 opacity-60">
               {/* Placeholder for company logos */}
-              <div className="text-white/50 font-semibold">TechCorp</div>
+              <div className="text-white/50 md:font-semibold">TechCorp</div>
               <div className="text-white/50 font-semibold">InnovateLab</div>
               <div className="text-white/50 font-semibold">FutureWorks</div>
             </div>

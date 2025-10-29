@@ -56,7 +56,7 @@ const BookConsultancyModal = () => {
         }
       }
     }
-    breadcrumbs.push({ label: "Book Consultancy", path: "/book" });
+    breadcrumbs.push({ label: "  Book a Session", path: "/book" });
 
     return breadcrumbs;
   };
@@ -154,8 +154,8 @@ const BookConsultancyModal = () => {
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-4xl md:text-4xl font-bold leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Book Consultancy Session Get an Actionable Plan
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Book a Consultancy Session Get an Actionable Plan
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Hands-on guidance for Product, Engineering, AI and Growth.
@@ -225,7 +225,7 @@ const BookConsultancyModal = () => {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-2 md:spay4">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2 text-left">
                     Full name

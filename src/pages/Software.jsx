@@ -223,7 +223,7 @@ Contact us for more information about our ${category.title.toLowerCase()} soluti
                 industries, tailored for business efficiency and automation
               </p>
               <Link to="/book">
-                <Button size="lg">Book Consultancy</Button>
+                <Button size="lg"> Book a Session</Button>
               </Link>
             </div>
           </div>

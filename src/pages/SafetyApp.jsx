@@ -20,7 +20,6 @@ import {
 import safetyIcon from "../assets/safety-icon.jpg";
 
 const SafetyApp = () => {
-  const [consultancyOpen, setConsultancyOpen] = useState(false);
   const [animatedSteps, setAnimatedSteps] = useState([0, 0, 0]);
   const [animatedNumbers, setAnimatedNumbers] = useState({
     downloads: 0,
@@ -168,28 +167,28 @@ const SafetyApp = () => {
   return (
     <div className="min-h-screen">
       <main>
-        <section className="relative overflow-hidden bg-gradient-to-br from-red-100 via-orange-100 via-yellow-100 to-green-100 py-20">
+        <section className="relative overflow-hidden bg-gradient-to-br from-yellow-100 via-green-100 to-red-100 py-20">
           <div className="container">
             <div className="grid items-center gap-12 md:grid-cols-2">
               <div>
-                <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-6xl text-red-600">
+                <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-6xl bg-gradient-to-r from-yellow-600 via-green-600 to-red-600 bg-clip-text text-transparent animate-gradient-text">
                   Safety & Hazard Recognition App
                 </h1>
-                <p className="mb-8 text-lg text-red-500">
+                <p className="mb-8 text-lg text-red-400">
                   AI-powered safety application using image recognition and HIRA
                   analysis to identify and eliminate workplace hazards
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <Button
                     size="lg"
-                    className="bg-red-600 text-white hover:bg-red-700"
+                    className="bg-red-500 text-white hover:bg-red-600"
                   >
                     Download App
                   </Button>
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-red-600 text-red-600 hover:bg-red-700"
+                    className="border-red-500 text-red-600 hover:bg-red-600"
                   >
                     Enterprise Inquiry
                   </Button>
@@ -397,27 +396,27 @@ const SafetyApp = () => {
           </div>
         </section>
 
-        <section className="bg-gradient-to-br from-red-600 via-orange-500 via-yellow-500 to-green-600 py-20 text-white">
+        <section className="bg-gradient-to-br from-red-400 via-orange-300  to-green-400 py-20 text-white animate-gradient-bg">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="mb-6 text-4xl font-bold">
+              <h2 className="mb-6 text-4xl font-bold animate-fade-in">
                 Start Improving Safety Today
               </h2>
-              <p className="mb-8 text-lg opacity-90">
+              <p className="mb-8 text-lg opacity-90 animate-slide-up">
                 Free for home and midscale businesses. Enterprise solutions
                 available.
               </p>
-              <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+              <div className="flex flex-col gap-4 sm:flex-row sm:justify-center animate-scale-in">
                 <Button
                   size="lg"
-                  className="bg-white text-red-600 hover:bg-white/90"
+                  className="bg-white text-red-600 hover:bg-white/90 animate-button-hover"
                 >
                   Try Free Version
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-red-600 hover:bg-white/10"
+                  className="border-white text-red-600 hover:bg-white/10 animate-button-hover"
                 >
                   Enterprise Inquiry
                 </Button>

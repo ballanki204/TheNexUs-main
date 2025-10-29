@@ -175,12 +175,18 @@ html {
 
   /* Gradient text animation */
   .animate-gradient-text {
-    background: linear-gradient(-45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
+    background: linear-gradient(-45deg, #eab308, #dc2626, #2563eb, #16a34a);
     background-size: 400% 400%;
     animation: gradientShift 3s ease infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  /* Animated gradient background */
+  .animate-gradient-bg {
+    background-size: 400% 400%;
+    animation: gradientBgShift 6s ease infinite;
   }
 
   /* Pulse animation for active indicators */
@@ -256,6 +262,18 @@ html {
 }
 
 @keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradientBgShift {
   0% {
     background-position: 0% 50%;
   }

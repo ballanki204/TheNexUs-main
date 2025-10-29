@@ -64,7 +64,7 @@ function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <span className="text-xl font-bold animate-gradient-text">
             TheNexUS
           </span>
         </Link>
@@ -84,7 +84,12 @@ function Header() {
           ))}
           <Link to={"/book"}>
             {" "}
-            <Button>Book Consultancy</Button>
+            <Button
+              className="bg-gradient-to-r from-yellow-300 via-red-400 to-blue-500 hover:from-yellow-400 hover:via-red-500 hover:to-blue-600 text-white animate-gradient-bg"
+              onClick={handleBookConsultancy}
+            >
+              Book a Session
+            </Button>
           </Link>
           <LoginPopup />
         </nav>
@@ -123,7 +128,12 @@ function Header() {
               </Link>
             ))}
             <NavLink to={"/book"}>
-              <Button className="w-full">Book Consultancy</Button>
+              <Button
+                className="w-full bg-gradient-to-r from-yellow-400 via-red-500 to-green-600 hover:from-yellow-500 hover:via-red-600 hover:to-green-700 text-white animate-gradient-bg"
+                onClick={handleBookConsultancy}
+              >
+                Book a Session
+              </Button>
             </NavLink>
             <div className="pt-2">
               <LoginPopup />
