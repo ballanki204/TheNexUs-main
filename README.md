@@ -4,7 +4,7 @@ A modern, responsive business website built with React and Vite, showcasing serv
 
 ## Features
 
-- **Logo Animation**: Interactive logo that starts black and white, changes to colorful gradient on hover, with title appearing smoothly.
+- **Logo Animation**: Interactive logo that starts black and white, changes to colorful gradient on hover, with title sliding in from the right side.
 - **Homepage**: Hero section with key highlights and navigation (Contact form removed).
   - **Our Services**: Software Development and Digital Marketing.
   - **Our Products**: Plant Marketplace and Safety & HIRA App.

@@ -71,7 +71,7 @@ class Footer extends React.Component {
                     <path d="M 38,22 L 219,336 L 100,58 L 413,58 L 44,698 L 475,698 L 298,388 L 415,663 L 108,662 L 475,22 Z" />
                   </g>
                 </svg>
-                <h3 className="text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-lg font-semibold translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">
                   TheNexUS
                 </h3>
               </div>
