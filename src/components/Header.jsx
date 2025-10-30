@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import LoginPopup from "./LoginPopup";
+import logo from "../assets/NexUsLogo.svg";
 
 function Header() {
   const location = useLocation();
@@ -63,8 +64,46 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold animate-gradient-text">
+        <Link to="/" className="flex items-center space-x-2 group">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="476"
+            height="719"
+            viewBox="0 0 476 719"
+            preserveAspectRatio="xMidYMid meet"
+            className="h-8 w-auto"
+          >
+            <defs>
+              <linearGradient
+                id="logoGradientHeader"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stopColor="#eab308" />
+                <stop offset="25%" stopColor="#16a34a" />
+                <stop offset="50%" stopColor="#2563eb" />
+                <stop offset="75%" stopColor="#ea580c" />
+                <stop offset="100%" stopColor="#eab308" />
+                <animate
+                  attributeName="x1"
+                  values="0%;100%;0%"
+                  dur="3s"
+                  repeatCount="indefinite"
+                />
+              </linearGradient>
+            </defs>
+            <g
+              fill="black"
+              stroke="none"
+              fillRule="evenodd"
+              className="group-hover:fill-[url(#logoGradientHeader)] transition-all duration-300"
+            >
+              <path d="M 38,22 L 219,336 L 100,58 L 413,58 L 44,698 L 475,698 L 298,388 L 415,663 L 108,662 L 475,22 Z" />
+            </g>
+          </svg>
+          <span className="text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             TheNexUS
           </span>
         </Link>

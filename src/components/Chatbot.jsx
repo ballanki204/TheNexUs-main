@@ -64,7 +64,7 @@ const Chatbot = () => {
       {isOpen && (
         <Card className="fixed bottom-20 md:bottom-25 right-10 md:right-20 w-60 md:w-80 h-80 md:h-96 z-40 flex flex-col shadow-lg">
           <CardHeader className="pb-2">
-            <CardTitle className="text-lg">Chatbot</CardTitle>
+            <CardTitle className="text-lg"> Viori Chatbot</CardTitle>
           </CardHeader>
           <CardContent className="flex-1 flex flex-col">
             <ScrollArea className="flex-1 mb-4">

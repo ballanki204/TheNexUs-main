@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import logo from "../assets/NexUsLogo.svg";
 
 class Footer extends React.Component {
   render() {
@@ -31,9 +32,49 @@ class Footer extends React.Component {
         <div className="container py-12 md:py-16">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
             <div>
-              <h3 className="text-lg font-semibold mb-4 animate-gradient-text text-transparent">
-                TheNexUS
-              </h3>
+              <div className="flex items-center space-x-2 mb-4 group">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="500"
+                  height="719"
+                  viewBox="0 0 476 719"
+                  preserveAspectRatio="xMidYMid meet"
+                  className="h-8 w-auto"
+                >
+                  <defs>
+                    <linearGradient
+                      id="logoGradientFooter"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stopColor="#eab308" />
+                      <stop offset="25%" stopColor="#16a34a" />
+                      <stop offset="50%" stopColor="#2563eb" />
+                      <stop offset="75%" stopColor="#ea580c" />
+                      <stop offset="100%" stopColor="#eab308" />
+                      <animate
+                        attributeName="x1"
+                        values="0%;100%;0%"
+                        dur="3s"
+                        repeatCount="indefinite"
+                      />
+                    </linearGradient>
+                  </defs>
+                  <g
+                    fill="black"
+                    stroke="none"
+                    fillRule="evenodd"
+                    className="group-hover:fill-[url(#logoGradientFooter)] transition-all duration-300"
+                  >
+                    <path d="M 38,22 L 219,336 L 100,58 L 413,58 L 44,698 L 475,698 L 298,388 L 415,663 L 108,662 L 475,22 Z" />
+                  </g>
+                </svg>
+                <h3 className="text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  TheNexUS
+                </h3>
+              </div>
               <p className="text-sm text-muted-foreground text-left">
                 "Nexus Support" can refer to several different companies and
                 services, including a professional back-office and security
