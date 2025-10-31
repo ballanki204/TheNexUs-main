@@ -17,7 +17,7 @@ class Footer extends React.Component {
       company: [
         { name: "About", path: "/about" },
         { name: "Careers", path: "/careers" },
-        { name: "Contact", path: "/#contact" },
+        { name: "Contact", path: "/careers/contact" },
       ],
       social: [
         { name: "Facebook", icon: Facebook, href: "#" },
@@ -39,7 +39,7 @@ class Footer extends React.Component {
                   height="719"
                   viewBox="0 0 476 719"
                   preserveAspectRatio="xMidYMid meet"
-                  className="h-8 w-auto"
+                  className="h-12 w-auto"
                 >
                   <defs>
                     <linearGradient
@@ -49,11 +49,8 @@ class Footer extends React.Component {
                       x2="100%"
                       y2="100%"
                     >
-                      <stop offset="0%" stopColor="#eab308" />
-                      <stop offset="25%" stopColor="#16a34a" />
-                      <stop offset="50%" stopColor="#2563eb" />
-                      <stop offset="75%" stopColor="#ea580c" />
-                      <stop offset="100%" stopColor="#eab308" />
+                      <stop offset="0%" stopColor="#16a34a" />
+                      <stop offset="100%" stopColor="#2563eb" />
                       <animate
                         attributeName="x1"
                         values="0%;100%;0%"
@@ -71,9 +68,28 @@ class Footer extends React.Component {
                     <path d="M 38,22 L 219,336 L 100,58 L 413,58 L 44,698 L 475,698 L 298,388 L 415,663 L 108,662 L 475,22 Z" />
                   </g>
                 </svg>
-                <h3 className="text-lg font-semibold translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">
-                  TheNexUS
-                </h3>
+                <div className="text-lg font-semibold flex flex-col">
+                  <div className="flex">
+                    {"THE".split("").map((char, index) => (
+                      <span
+                        key={index}
+                        className="hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 hover:bg-clip-text hover:text-transparent hover:drop-shadow-[0_0_10px_rgba(34,197,94,0.8)] hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.8)] transition-all duration-300 cursor-pointer"
+                      >
+                        {char}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex">
+                    {"NEXUS".split("").map((char, index) => (
+                      <span
+                        key={index}
+                        className="hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 hover:bg-clip-text hover:text-transparent hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.8)] hover:drop-shadow-[0_0_10px_rgba(34,197,94,0.8)] transition-all duration-300 cursor-pointer"
+                      >
+                        {char}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
               <p className="text-sm text-muted-foreground text-left">
                 "Nexus Support" can refer to several different companies and

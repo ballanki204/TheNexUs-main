@@ -121,14 +121,18 @@ class DigitalMarketing extends React.Component {
                   presence, reach your target audience, and drive measurable
                   results
                 </p>
-                <Link to="/book">
-                  <Button
-                    size="lg"
-                    className="bg-orange-600 hover:bg-orange-700 text-white"
-                  >
-                    Book a Session
-                  </Button>
-                </Link>
+                <Button
+                  size="lg"
+                  className="bg-orange-600 hover:bg-orange-700 text-white"
+                  onClick={() => {
+                    window.location.href = "/book";
+                    setTimeout(() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }, 100);
+                  }}
+                >
+                  Book a Session
+                </Button>
               </div>
             </div>
           </section>

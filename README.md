@@ -1,6 +1,6 @@
 # The NexUs
 
-A modern, responsive business website built with React and Vite, showcasing services in software development, digital marketing, plant marketplace, and safety applications. The site features a clean UI using ShadCN UI components and Tailwind CSS for styling.
+A modern, responsive business website built with React and Vite, showcasing services in software development, digital marketing, plant marketplace, and safety applications. The site features a clean UI using ShadCN UI components and Tailwind CSS for styling, with custom color themes for different sections (plant marketplace in earthy tones, safety app in professional blue tones).
 
 ## Features
 
@@ -8,7 +8,7 @@ A modern, responsive business website built with React and Vite, showcasing serv
 - **Homepage**: Hero section with key highlights and navigation (Contact form removed).
   - **Our Services**: Software Development and Digital Marketing.
   - **Our Products**: Plant Marketplace and Safety & HIRA App.
-- **About Page**: Information about the company and its mission with themed platform cards (green for Plant Marketplace, red for Safety App) and interactive hover effects.
+- **About Page**: Information about the company and its mission with themed platform cards (custom plant colors for Plant Marketplace, custom safety colors for Safety App) and interactive hover effects.
 - **Software Services**: Detailed pages for industry-specific software solutions including:
   - Healthcare
   - Real Estate
@@ -20,13 +20,14 @@ A modern, responsive business website built with React and Vite, showcasing serv
   - Cybersecurity
   - AI & ML
 - **Digital Marketing**: Services and strategies for online marketing.
-- **Plant Marketplace**: Platform for buying and selling plants.
-- **Safety App**: Application focused on safety features.
+- **Plant Marketplace**: Platform for buying and selling plants with custom earthy color theme (Primary: #5A8F6E, Secondary: #D7CCC8, Accent: #A1887F, Background: #F5F5F5, Text: #3E2723).
+- **Safety App**: Application focused on safety features with custom professional blue color theme (Primary: #1976D2, Secondary: #90CAF9, Accent: #FFB300, Background: #F5F5F5, Text: #1A1A1A).
 - **Contact Forms**: Interactive forms for booking consultancy and general inquiries.
 - **Chatbot**: Integrated chatbot for user assistance.
 - **Responsive Design**: Optimized for desktop and mobile devices.
 - **Dark/Light Mode**: Theme switching capability.
 - **Breadcrumb Navigation**: Dynamic breadcrumbs on all pages except home and booking consultancy.
+- **Smooth Scrolling**: Automatic scroll to top when navigating to service pages from Software Solutions page.
 - **Optimized Build**: Code-split chunks for better performance (vendor, UI, router, utils, icons).
 
 ## Tech Stack

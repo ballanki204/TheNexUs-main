@@ -67,19 +67,19 @@ const BookConsultancyModal = () => {
     {
       id: "starter",
       title: "Starter",
-      price: "₹1,499",
+      price: "₹xxxx",
       desc: "30-min quick audit + recommendations",
     },
     {
       id: "standard",
       title: "Standard",
-      price: "₹3,499",
+      price: "₹xxxxx",
       desc: "60-min deep consultancy + action plan",
     },
     {
       id: "premium",
       title: "Premium",
-      price: "₹7,499",
+      price: "₹xxxxx",
       desc: "2-hour strategy session + follow-up",
     },
   ];
@@ -321,17 +321,12 @@ const BookConsultancyModal = () => {
                   <label className="block text-sm font-semibold text-gray-700 mb-2 text-left">
                     Package
                   </label>
-                  <select
+                  <input
                     value={form.package}
                     onChange={(e) => handleChange("package", e.target.value)}
                     className="block w-full px-4 py-3 rounded-xl border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 bg-white/50 backdrop-blur-sm"
-                  >
-                    {packages.map((p) => (
-                      <option key={p.id} value={p.id}>
-                        {p.title} — {p.price}
-                      </option>
-                    ))}
-                  </select>
+                    placeholder="Enter package type (e.g., Starter, Standard, Premium)"
+                  />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

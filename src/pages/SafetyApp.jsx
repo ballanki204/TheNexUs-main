@@ -167,28 +167,28 @@ const SafetyApp = () => {
   return (
     <div className="min-h-screen">
       <main>
-        <section className="relative overflow-hidden bg-gradient-to-br from-yellow-100 via-green-100 to-red-100 py-20">
+        <section className="relative overflow-hidden bg-safety-background py-20">
           <div className="container">
             <div className="grid items-center gap-12 md:grid-cols-2">
               <div>
-                <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-6xl bg-gradient-to-r from-yellow-600 via-green-600 to-red-600 bg-clip-text text-transparent animate-gradient-text">
+                <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-6xl text-safety-primary">
                   Safety & Hazard Recognition App
                 </h1>
-                <p className="mb-8 text-lg text-red-400">
+                <p className="mb-8 text-lg text-safety-text">
                   AI-powered safety application using image recognition and HIRA
                   analysis to identify and eliminate workplace hazards
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <Button
                     size="lg"
-                    className="bg-red-500 text-white hover:bg-red-600"
+                    className="bg-safety-primary text-white hover:bg-safety-primary/90"
                   >
                     Download App
                   </Button>
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-red-500 text-red-600 hover:bg-red-600"
+                    className="border-safety-primary text-safety-primary hover:bg-safety-primary hover:text-white"
                   >
                     Enterprise Inquiry
                   </Button>
@@ -236,7 +236,7 @@ const SafetyApp = () => {
                   },
                 ].map((item, index) => (
                   <div key={item.step} className="text-center">
-                    <div className="mb-4 text-4xl font-bold text-red-600">
+                    <div className="mb-4 text-4xl font-bold text-safety-primary">
                       {animatedSteps[index] || 0}+
                     </div>
                     <h3 className="mb-2 text-xl font-semibold">{item.title}</h3>
@@ -249,8 +249,8 @@ const SafetyApp = () => {
               <div className="mt-16 grid gap-8 md:grid-cols-1">
                 <div className="text-center">
                   <div className="mb-4 flex items-center justify-center">
-                    <Download className="h-8 w-8 text-red-600 mr-2" />
-                    <span className="text-4xl font-bold text-red-600">
+                    <Download className="h-8 w-8 text-safety-primary mr-2" />
+                    <span className="text-4xl font-bold text-safety-primary">
                       {animatedNumbers.downloads.toLocaleString()}+
                     </span>
                   </div>
@@ -275,12 +275,12 @@ const SafetyApp = () => {
                 return (
                   <Card
                     key={feature.title}
-                    className="group transition-all hover:shadow-lg animate-fade-up"
+                    className="group transition-all hover:shadow-lg hover:scale-105 hover:border-safety-primary animate-fade-up"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <CardHeader>
-                      <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-red-100">
-                        <Icon className="h-6 w-6 text-red-600" />
+                      <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-safety-secondary group-hover:bg-safety-accent transition-colors">
+                        <Icon className="h-6 w-6 text-safety-primary group-hover:text-safety-text transition-colors" />
                       </div>
                       <CardTitle className="text-xl">{feature.title}</CardTitle>
                       <CardDescription>{feature.description}</CardDescription>
@@ -314,7 +314,7 @@ const SafetyApp = () => {
                           key={item}
                           className="flex items-start gap-2 text-sm text-muted-foreground"
                         >
-                          <div className="mt-1.5 h-1 w-1 rounded-full bg-red-600" />
+                          <div className="mt-1.5 h-1 w-1 rounded-full bg-safety-primary" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -333,9 +333,9 @@ const SafetyApp = () => {
                 Version Roadmap
               </h2>
               <div className="grid gap-8 md:grid-cols-2">
-                <Card className="border-2 border-red-600">
+                <Card className="border-2 border-safety-primary">
                   <CardHeader>
-                    <CardTitle className="text-red-600">
+                    <CardTitle className="text-safety-primary">
                       Version 1 (Current)
                     </CardTitle>
                     <CardDescription>
@@ -355,7 +355,7 @@ const SafetyApp = () => {
                           key={item}
                           className="flex items-start gap-2 text-sm"
                         >
-                          <div className="mt-1.5 h-1 w-1 rounded-full bg-red-600" />
+                          <div className="mt-1.5 h-1 w-1 rounded-full bg-safety-primary" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -384,7 +384,7 @@ const SafetyApp = () => {
                           key={item}
                           className="flex items-start gap-2 text-sm text-muted-foreground"
                         >
-                          <div className="mt-1.5 h-1 w-1 rounded-full bg-red-600" />
+                          <div className="mt-1.5 h-1 w-1 rounded-full bg-safety-primary" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -396,7 +396,7 @@ const SafetyApp = () => {
           </div>
         </section>
 
-        <section className="bg-gradient-to-br from-red-400 via-orange-300  to-green-400 py-20 text-white animate-gradient-bg">
+        <section className="bg-gradient-to-br from-safety-secondary via-safety-accent to-safety-primary py-20 text-safety-text animate-gradient-bg">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="mb-6 text-4xl font-bold animate-fade-in">
@@ -409,14 +409,14 @@ const SafetyApp = () => {
               <div className="flex flex-col gap-4 sm:flex-row sm:justify-center animate-scale-in">
                 <Button
                   size="lg"
-                  className="bg-white text-red-600 hover:bg-white/90 animate-button-hover"
+                  className="bg-safety-background text-safety-primary hover:bg-safety-background/90 animate-button-hover"
                 >
                   Try Free Version
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-red-600 hover:bg-white/10 animate-button-hover"
+                  className="border-safety-background text-safety-background text-blue-500 hover:bg-safety-background/10 animate-button-hover"
                 >
                   Enterprise Inquiry
                 </Button>

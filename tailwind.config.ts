@@ -15,7 +15,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ["Inter", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -60,6 +60,20 @@ export default {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+        },
+        plant: {
+          primary: "#5A8F6E",
+          secondary: "#D7CCC8",
+          accent: "#A1887F",
+          background: "#F5F5F5",
+          text: "#3E2723",
+        },
+        safety: {
+          primary: "#1976D2",
+          secondary: "#90CAF9",
+          accent: "#FFB300",
+          background: "#F5F5F5",
+          text: "#1A1A1A",
         },
       },
       borderRadius: {

@@ -13,7 +13,7 @@ class ProductsGrid extends React.Component {
         description:
           "Revolutionary platform for buying and selling plants and greenery",
         link: "/plant-marketplace",
-        gradient: "from-green-200 to-amber-300",
+        gradient: "from-green-300 to-green-700",
       },
       {
         icon: Shield,
@@ -21,7 +21,7 @@ class ProductsGrid extends React.Component {
         description:
           "AI-powered hazard recognition and workplace safety solutions",
         link: "/safety-app",
-        gradient: "from-red-600 to-orange-500",
+        gradient: "from-red-400 to-orange-500",
       },
     ];
 

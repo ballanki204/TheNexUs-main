@@ -1,6 +1,5 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 import BookConsultancyModal from "../components/BookConsultancyModal";
 import {
   Card,
@@ -86,14 +85,14 @@ class PlantMarketplace extends React.Component {
     return (
       <div className="min-h-screen">
         <main>
-          <section className="relative overflow-hidden bg-gradient-to-br from-green-100 via-lime-200 to-amber-200 py-20">
+          <section className="relative overflow-hidden bg-plant-background py-20">
             <div className="container">
               <div className="grid items-center gap-12 md:grid-cols-2">
                 <div>
-                  <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-6xl text-green-800">
+                  <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-6xl text-plant-text">
                     Plant & Greenery Marketplace
                   </h1>
-                  <p className="mb-8 text-lg text-green-700">
+                  <p className="mb-8 text-lg text-plant-text">
                     Revolutionary platform empowering home-based entrepreneurs
                     to buy, sell, and grow their plant business legally and
                     sustainably
@@ -101,14 +100,14 @@ class PlantMarketplace extends React.Component {
                   <div className="flex flex-col gap-4 sm:flex-row">
                     <Button
                       size="lg"
-                      className="bg-green-600 text-white hover:bg-green-700"
+                      className="bg-plant-primary text-white hover:bg-plant-primary/90"
                     >
                       Join as Seller
                     </Button>
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-green-500 text-green-500 hover:bg-green-500"
+                      className="border-plant-primary text-plant-primary hover:bg-plant-primary hover:text-white"
                       onClick={() => this.setConsultancyOpen(true)}
                     >
                       Learn More
@@ -143,12 +142,12 @@ class PlantMarketplace extends React.Component {
                   return (
                     <Card
                       key={feature.title}
-                      className="group transition-all hover:shadow-lg hover:scale-105 hover:border-green-300 animate-fade-up"
+                      className="group transition-all hover:shadow-lg hover:scale-105 hover:border-plant-primary animate-fade-up"
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       <CardHeader>
-                        <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-green-100 group-hover:bg-green-200 transition-colors">
-                          <Icon className="h-6 w-6 text-green-600 group-hover:text-green-700 transition-colors" />
+                        <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-plant-secondary group-hover:bg-plant-accent transition-colors">
+                          <Icon className="h-6 w-6 text-plant-primary group-hover:text-plant-text transition-colors" />
                         </div>
                         <CardTitle className="text-xl">
                           {feature.title}
@@ -177,10 +176,10 @@ class PlantMarketplace extends React.Component {
                   {categories.map((category) => (
                     <Card
                       key={category}
-                      className="text-center transition-all hover:shadow-md hover:scale-105 hover:border-green-300 cursor-pointer"
+                      className="text-center transition-all hover:shadow-md hover:scale-105 hover:border-plant-primary cursor-pointer"
                     >
                       <CardContent className="p-6">
-                        <p className="font-medium text-green-600 hover:text-green-700 transition-colors">
+                        <p className="font-medium text-plant-primary hover:text-plant-text transition-colors">
                           {category}
                         </p>
                       </CardContent>
@@ -198,9 +197,9 @@ class PlantMarketplace extends React.Component {
                   Platform Roadmap
                 </h2>
                 <div className="grid gap-8 md:grid-cols-2">
-                  <Card className="border-2 border-green-600">
+                  <Card className="border-2 border-plant-primary">
                     <CardHeader>
-                      <CardTitle className="text-green-600">
+                      <CardTitle className="text-plant-primary">
                         Version 1 (Current)
                       </CardTitle>
                       <CardDescription>
@@ -220,7 +219,7 @@ class PlantMarketplace extends React.Component {
                             key={item}
                             className="flex items-start gap-2 text-sm"
                           >
-                            <div className="mt-1.5 h-1 w-1 rounded-full bg-green-600" />
+                            <div className="mt-1.5 h-1 w-1 rounded-full bg-plant-primary" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -248,7 +247,7 @@ class PlantMarketplace extends React.Component {
                             key={item}
                             className="flex items-start gap-2 text-sm text-muted-foreground"
                           >
-                            <div className="mt-1.5 h-1 w-1 rounded-full bg-green-600" />
+                            <div className="mt-1.5 h-1 w-1 rounded-full bg-plant-primary" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -260,7 +259,7 @@ class PlantMarketplace extends React.Component {
             </div>
           </section>
 
-          <section className="bg-gradient-to-br from-green-400 via-yellow-400 to-blue-500 py-20 text-white animate-gradient-bg">
+          <section className="bg-plant-primary py-20 text-plant-background">
             <div className="container">
               <div className="mx-auto max-w-3xl text-center">
                 <h2 className="mb-6 text-4xl font-bold animate-fade-in">
@@ -273,20 +272,24 @@ class PlantMarketplace extends React.Component {
                 <div className="flex flex-col gap-4 sm:flex-row sm:justify-center animate-scale-in">
                   <Button
                     size="lg"
-                    className="bg-white text-green-600 hover:bg-white/90 animate-button-hover"
+                    className="bg-plant-background text-plant-primary hover:bg-plant-background/90"
                   >
                     Sign Up Free
                   </Button>
 
-                  <Link to="/book">
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="border-white text-green-600 hover:bg-white/10 animate-button-hover"
-                    >
-                      Book Consultancy
-                    </Button>
-                  </Link>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-plant-background text-plant-background text-green-600 hover:bg-plant-background/10"
+                    onClick={() => {
+                      window.location.href = "/book";
+                      setTimeout(() => {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }, 100);
+                    }}
+                  >
+                    Book a Session
+                  </Button>
                 </div>
               </div>
             </div>

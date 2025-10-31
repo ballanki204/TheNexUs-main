@@ -222,9 +222,18 @@ Contact us for more information about our ${category.title.toLowerCase()} soluti
                 End-to-end custom software applications for mid-to-large scale
                 industries, tailored for business efficiency and automation
               </p>
-              <Link to="/book">
-                <Button size="lg"> Book a Session</Button>
-              </Link>
+              <Button
+                size="lg"
+                onClick={() => {
+                  window.location.href = "/book";
+                  setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }, 100);
+                }}
+              >
+                {" "}
+                Book a Session
+              </Button>
             </div>
           </div>
         </section>
@@ -253,7 +262,14 @@ Contact us for more information about our ${category.title.toLowerCase()} soluti
                       <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                         <Icon className="h-6 w-6 text-primary" />
                       </div>
-                      <Link to={`/software/${category.slug}`}>
+                      <Link
+                        to={`/software/${category.slug}`}
+                        onClick={() => {
+                          setTimeout(() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }, 100);
+                        }}
+                      >
                         <CardTitle className="text-xl hover:text-primary transition-colors cursor-pointer">
                           {category.title}
                         </CardTitle>

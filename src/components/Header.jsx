@@ -3,7 +3,6 @@ import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import LoginPopup from "./LoginPopup";
-import logo from "../assets/NexUsLogo.svg";
 
 function Header() {
   const location = useLocation();
@@ -21,6 +20,9 @@ function Header() {
   const handleBookConsultancy = () => {
     navigate("/book");
     closeMenu();
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 100);
   };
 
   // Define theme colors for each page
@@ -36,7 +38,7 @@ function Header() {
       hover: "hover:text-green-600",
       active: "text-green-600",
     },
-    "/safety-app": { hover: "hover:text-red-600", active: "text-red-600" },
+    "/safety-app": { hover: "hover:text-blue-600", active: "text-blue-600" },
     "/careers": { hover: "hover:text-primary", active: "text-primary" },
   };
 
@@ -53,12 +55,12 @@ function Header() {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
     { name: "Software", path: "/software" },
     { name: "Digital Marketing", path: "/digital-marketing" },
     { name: "Plant Marketplace", path: "/plant-marketplace" },
     { name: "Safety App", path: "/safety-app" },
     { name: "Careers", path: "/careers" },
+    { name: "About", path: "/about" },
   ];
 
   return (
@@ -71,7 +73,7 @@ function Header() {
             height="719"
             viewBox="0 0 476 719"
             preserveAspectRatio="xMidYMid meet"
-            className="h-8 w-auto"
+            className="h-12 w-auto"
           >
             <defs>
               <linearGradient
@@ -81,11 +83,8 @@ function Header() {
                 x2="100%"
                 y2="100%"
               >
-                <stop offset="0%" stopColor="#eab308" />
-                <stop offset="25%" stopColor="#16a34a" />
-                <stop offset="50%" stopColor="#2563eb" />
-                <stop offset="75%" stopColor="#ea580c" />
-                <stop offset="100%" stopColor="#eab308" />
+                <stop offset="0%" stopColor="#16a34a" />
+                <stop offset="100%" stopColor="#2563eb" />
                 <animate
                   attributeName="x1"
                   values="0%;100%;0%"
@@ -103,9 +102,28 @@ function Header() {
               <path d="M 38,22 L 219,336 L 100,58 L 413,58 L 44,698 L 475,698 L 298,388 L 415,663 L 108,662 L 475,22 Z" />
             </g>
           </svg>
-          <span className="text-xl font-bold translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">
-            TheNexUS
-          </span>
+          <div className="text-xl font-bold flex flex-col">
+            <div className="flex">
+              {"THE".split("").map((char, index) => (
+                <span
+                  key={index}
+                  className="hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 hover:bg-clip-text hover:text-transparent hover:drop-shadow-[0_0_10px_rgba(34,197,94,0.8)] hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.8)] transition-all duration-300 cursor-pointer"
+                >
+                  {char}
+                </span>
+              ))}
+            </div>
+            <div className="flex">
+              {"NEXUS".split("").map((char, index) => (
+                <span
+                  key={index}
+                  className="hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 hover:bg-clip-text hover:text-transparent hover:drop-shadow-[0_0_10px_rgba(34,197,94,0.8)] hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.8)] transition-all duration-300 cursor-pointer"
+                >
+                  {char}
+                </span>
+              ))}
+            </div>
+          </div>
         </Link>
 
         <nav className="hidden md:flex md:items-center md:gap-6">
